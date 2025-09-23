@@ -5,7 +5,11 @@
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
   "autoSaveInterval": 1,
   "autoPushInterval": 0,
+<<<<<<< HEAD
   "autoPullInterval": 5,
+=======
+  "autoPullInterval": 4,
+>>>>>>> origin/main
   "autoPullOnBoot": true,
   "autoCommitOnlyStaged": false,
   "disablePush": false,

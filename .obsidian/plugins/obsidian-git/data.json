@@ -5,12 +5,8 @@
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
   "autoSaveInterval": 1,
   "autoPushInterval": 0,
-<<<<<<< HEAD
-  "autoPullInterval": 5,
-=======
-  "autoPullInterval": 4,
->>>>>>> origin/main
-  "autoPullOnBoot": true,
+  "autoPullInterval": 1,
+  "autoPullOnBoot": false,
   "autoCommitOnlyStaged": false,
   "disablePush": false,
   "pullBeforePush": true,
@@ -35,7 +31,7 @@
   "submoduleRecurseCheckout": false,
   "gitDir": "",
   "showFileMenu": true,
-  "authorInHistoryView": "initials",
+  "authorInHistoryView": "hide",
   "dateInHistoryView": false,
   "diffStyle": "split",
   "lineAuthor": {

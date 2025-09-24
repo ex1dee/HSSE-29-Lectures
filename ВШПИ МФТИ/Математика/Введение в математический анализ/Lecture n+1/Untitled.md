@@ -32,13 +32,12 @@ $0 \leq |x - x_{n}| \leq \frac{1}{n} \implies$ по теореме о 2 милл
 >Точка $x$ называется **предельной** множества $E$, если $\ \forall \delta > 0 \to \dot{U}_{\delta}(x) \cap E \neq \emptyset$ $(\\\dot{U}_{\delta}(x) = \text{})$
 
 >Пусть $E \subset \mathbb{R}, E \neq \emptyset$. 
->$$ x \text{ является точкой прикосновения } E \iff
+$$ x \text{ является точкой прикосновения } E \iff
 \left[ \begin{array}{l}
 x \text{ - изолированная} \\
 x \text{ - предельная}
 \end{array} \right.
 $$
-
 
 *Очевидно из определения*
 

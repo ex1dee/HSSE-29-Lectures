@@ -36,7 +36,7 @@ x^2 + y^2 = 1 \\
 y = 2x
 \end{cases}
 $$
-* Совокупность (set) $$
+* Совокупность (seq) $$
 \left[ \begin{array}{l}
 x^2 + y^2 = 1 \\
 y = 2x

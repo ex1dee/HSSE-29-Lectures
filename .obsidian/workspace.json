@@ -22,20 +22,6 @@
             }
           },
           {
-            "id": "1d1c7bcff456606a",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json"
-            }
-          },
-          {
             "id": "315bc40396df8e2f",
             "type": "leaf",
             "state": {
@@ -77,8 +63,7 @@
               "title": "Latex Suite"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -237,7 +222,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1d1c7bcff456606a",
+  "active": "54d08aa1a2c271ea",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "ВШПИ МФТИ/Математика/Аналитическая геометрия/Lecture n/Векторное произведение.md",

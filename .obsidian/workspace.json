@@ -22,17 +22,17 @@
             }
           },
           {
-            "id": "f4b61dae8330d6b6",
+            "id": "b267fe2decd4f1c6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
+                "aFile": "conflict-files-obsidian-git.md",
+                "bFile": "conflict-files-obsidian-git.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "icon": "diff",
+              "title": "Diff: conflict-files-obsidian-git"
             }
           }
         ],
@@ -195,10 +195,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f4b61dae8330d6b6",
+  "active": "b267fe2decd4f1c6",
   "lastOpenFiles": [
-    "ВШПИ МФТИ/Программирование/Инструменты разработчика/2. GIT чуть детальнее.md",
     "conflict-files-obsidian-git.md",
+    "ВШПИ МФТИ/Программирование/Инструменты разработчика/2. GIT чуть детальнее.md",
     "ВШПИ МФТИ/Программирование/Инструменты разработчика/Про ДЗ 1, CI CD.md",
     "ВШПИ МФТИ/Математика/Дискретная математика/Lecture n/Untitled.md",
     "ВШПИ МФТИ/Математика/Дискретная математика/1. Комбинаторика и множества/Перестановки, сочетания, размещения.md",

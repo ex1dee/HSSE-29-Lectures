@@ -51,7 +51,7 @@ $\ \exists\epsilon>0:\ \forall n\in \mathbb{N} \to f(x_{n}) \not\in U_{\epsilon}
 >множеству $X$, если 
 >- $\ \forall\epsilon>0 \ \exists \delta(\epsilon)>0 : \ \forall x\in \dot{U}_{\delta(\epsilon)}(x_{0})\cap X \to f(x) \in U_{\epsilon}(A)$ (*по Коши*)
 >- $\ \forall$ последовательности Гейне $\{ x_{n} \}$ в точке $x_{0} \to f(x_{n}) \to A, n\to \infty$ (*по Гейне*)
->
+>$\hat{c}$
 >записывать это: $\lim_{ x \to x_{0}, x \in X }f(x) = A$ ?
 
 по гейне экв. по коши

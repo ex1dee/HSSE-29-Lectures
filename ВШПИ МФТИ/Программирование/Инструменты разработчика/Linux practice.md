@@ -49,3 +49,5 @@ b. date +%H:%M:%S > 2b.txt
 c. date +%H:%M:%S >> 2c.txt
 d. sort names.txt > 2d.txt
 e. rev names.txt > 2e.txt
+f. cat dream.txt happiness.txt > 2f.txt
+g. printf "first\nsecond" > 2g.txt

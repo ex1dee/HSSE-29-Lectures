@@ -30,6 +30,10 @@ $a :d, b : d \implies (a - b) : d$
 2. Раз $НОД(a, b) = НОД(a - b, b)$, то $НОД(a, b) = НОД\left( a - \left\lfloor  \frac{a}{b}  \right\rfloor b, b \right) = НОД(a \% b, b)$
 
 >**Расширенный алгоритм Евклида**
->
+>$xa + yb = d$
+
+$x_{t} = -1, y_{t} = q_{t+1} + 1$
+$x_{i} = y_{i+1}, y_{i} = x_{i+1} - q_{i+1}y_{i+1}$
+$x_{i}a_{i} + y_{i}a_{i+1} = НОД(a_{0}, a_{1})$
 
 

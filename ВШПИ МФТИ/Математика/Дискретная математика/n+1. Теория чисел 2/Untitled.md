@@ -84,17 +84,15 @@ $x = x_{0}+\frac{b}{d}t, y= y_{0} + \frac{b}{d}t$
 Умножим всё на $\frac{c}{d} \in \mathbb{Z}$: $a\left( \frac{c}{d}x' \right) + b\left( \frac{c}{d}x' \right) = c$
 Т.е. $x_{0}=\frac{c}{d}x', y_{0} = \frac{c}{d}y'$
 
->Число $a$ является **квадратичным вычетом** по модулю $n$, если 
->$\ \exists x\in \mathbb{Z}:x^2\equiv_{n}a$
+>Число $a$ является **квадратичным вычетом** (остатком) по модулю $n$, если 
+>$\ \exists x\in \mathbb{Z}:x^2\equiv_{n}a$, $a \neq 0$ 
 >иначе это **квадратичный невычет**
 
->**Символ Лежандра** - $\left( \frac{a}{p} \right), a \in \mathbb{Z}, p > 2$ - простое ($\frac{a}{p}$ - не дробь!)
->$\left( \frac{a}{p} \right) = 0$, если $a : p$
->$\left( \frac{a}{p} \right) = 1$, если $a$ - квадратичный вычет по модулю p
->$\left( \frac{a}{p} \right) = -1$, если $a$ - квадратичный невычет по модулю p
+$V$ - множество квадратичных вычетов по модулю $n$
+$N$ - множество квадратичных невычетов по модулю $n$
 
-$x^2 \equiv_{p} (p-x)^2 \equiv_{p} p^2 - 2px + x^2 \equiv_{p} x^2$ 
 >$1^2, 2^2, \dots,\left( \frac{p-1}{2} \right)^2$ - все квадратичные вычеты по модулю $p$
+>Количество квадратичных вычетов $=$ количество квадратичных невычетов $= \frac{p-1}{2}$
 
 *Доказательство:*
 Рассмотрим все квадратичные вычеты по модулю $p$:
@@ -111,4 +109,65 @@ $\frac{p+1}{2} \leq p - x \leq p -1$
 найдётся пара из $\left( \frac{p+1}{2} \right)^2, \dots, (p-1)^2$
 
 Кроме того, $x_{i}^2 \not\equiv_{p} x_{j}^2$ при $x_{i} \neq x_{j}$
-Иначе $(x_{i} ==$
+Иначе $(x_{i} - x_{j})(x_{i}+x_{j}) \equiv_{p} 0$. Тогда либо $x_{i} - x_{j} \equiv_{p} 0$, но это невозможно, т.к. $x_{i} \neq x_{j}$,
+либо $x_{i}+x_{j} \equiv_{p}0$, но это также невозможно, т.к. $x_{i}+x_{j} < \frac{p-1}{2} * 2<p$ - противоречие.
+
+Таким образом, все квадратичные вычеты по модулю $p$ - это числа $1^2, 2^2, \dots, \left( \frac{p-1}{2} \right)^2$.
+Все ненулевые вычеты по модулю $p: 1, 2, \dots, p-1$.  Их $p-1$, из них $\frac{p-1}{2}$ квадратичных вычетов по модулю $p$ и $\left( p - \frac{p-1}{2}\right) = \frac{p-1}{2}$ квадратичных невычетов по модулю $p$.
+
+>**Символ Лежандра** - $\left( \frac{a}{p} \right), a \in \mathbb{Z}, p > 2$ - простое ($\frac{a}{p}$ - не дробь!)
+>$\left( \frac{a}{p} \right) = 0$, если $a : p$
+>$\left( \frac{a}{p} \right) = 1$, если $a$ - квадратичный вычет по модулю p
+>$\left( \frac{a}{p} \right) = -1$, если $a$ - квадратичный невычет по модулю p
+
+> **Мультипликативность символа Лежандра**
+> $\left( \frac{ab}{p} \right) = \left( \frac{a}{p} \right)*\left( \frac{b}{p} \right)$
+
+*Доказательство:*
+
+**1 случай**
+Если $\left( \frac{a}{p} \right) = 0$ или $\left( \frac{b}{p} \right) = 0,$ то $\left( \frac{ab}{p} \right) = 0$ (*если $a : p$ или $b : p$*)
+*Теперь рассмотрим случаи, когда $a  \not{:}\ \ p$ и $b  \not{:}\ \ p$.*
+
+**2 случай**
+Если $\left( \frac{a}{p} \right)=\left( \frac{b}{p} \right)=1$:
+$a \equiv_{p} x^2, b \equiv_{p}y^2 \implies ab \equiv_{p}(xy)^2 \implies$ $\left( \frac{ab}{p} \right)=1$
+
+**3 случай**
+Теперь, без ограничения общности, предположим, что $\left( \frac{a}{p} \right) = 1, \left(\frac{b}{p}\right)=-1$
+Очевидно, $\left( \frac{ab}{p} \right) \neq 0$. Предположим, что $\left( \frac{ab}{p} \right) = 1$.
+
+Тогда $\ \exists x:a\equiv_{p}x^2, \ \exists y:ab\equiv_{p}y^2$
+Т.к. $a \not\equiv_{p}0$, то $x\not\equiv_{p} 0 \implies НОД(x, p) = 1 \implies \ \exists x^{-1} : x\cdot x^{-1}\equiv_{p}1$
+$\implies (x\cdot x^{-1})^2\equiv_{p}1 \iff x^2\cdot(x^{-1})^2\equiv_{p}1 \implies a\cdot(x^{-1})^2 \equiv_{p}1$
+Домножим $ab\equiv_{p}y^2$ на $(x^{-1})^2$ и получим: $b\equiv_{p}y^2\cdot (x^{-1})^2 \implies \left( \frac{b}{p} \right)=1$ - противоречие.
+Следовательно, если $\left( \frac{a}{p} \right)=1, \left( \frac{b}{p} \right)=-1$, то $\left( \frac{ab}{p} \right)=-1$
+
+**4 случай**
+Если $\left( \frac{a}{p} \right) = -1, \left( \frac{b}{p} \right)=-1$.
+Рассмотрим ненулевые остатки при делении на $p: 1, 2, \dots, p - 1$
+Умножим их на $c : НОД(c, p) = 1$, получим различные $c, 2c, \dots, (p-1)c$
+
+Предположим, $c$ - невычет. 
+Если $c$ умножить на каждые $\frac{p-1}{2}$ вычетов, то получим $\frac{p-1}{2}$ невычетов (*3 случай*)
+Если $c$ умножить на каждые $\frac{p-1}{2}$ невычетов, то получим оставшиеся $p - \frac{p-1}{2} = \frac{p-1}{2}$ вычетов,
+что и требовалось доказать.
+
+>**Критерий Эйлера**
+>Пусть $НОД(a, p) = 1, p > 2$ - простое. Тогда
+>$\left( \frac{a}{p} \right) = 1 \iff a^{\frac{p-1}{2}} \equiv_{p} 1$
+
+*Примечание*: 
+$a^{p-1} \equiv_{p} 1 \iff ( a^ \frac{p-1}{2} - 1)( a^ \frac{p-1}{2} + 1) \equiv_{p}0 \implies$ либо $a^ \frac{p-1}{2} \equiv_{p} 1$, либо $a^ \frac{p-1}{2} \equiv_{p} -1$
+Тогда, если, $\left( \frac{a}{p} \right) = 1 \iff a^{\frac{p-1}{2}} \equiv_{p} 1$, то верно и отрицание: $\left( \frac{a}{p} \right) = -1 \iff a^{\frac{p-1}{2}} \equiv_{p} -1$
+
+*Доказательство*
+(**=>**) $\left( \frac{a}{p} \right) = 1\implies \ \exists x: a \equiv_{p}x^2 \implies a^{\frac{p-1}{2}} \equiv_{p} x^\frac{(p-1) * 2}{2} \equiv_{p} x^{p-1} \equiv_{p} 1$ по малой теореме Ферма
+**(<=)** Пусть $\left( \frac{a}{p} \right) = -1$. Докажем, что $\left( \frac{a}{p} \right) = 1 \iff a^{\frac{p-1}{2}} \not\equiv_{p} 1$.
+
+Пусть 
+$v=П_{v_{i}\in V}v_{i}$ - произведение всех квадратичных вычетов по модулю $p$.
+$n=П_{n_{i}\in N}n_{i}$ - произведение всех квадратичных невычетов по модулю $p$.
+
+$av_{1}\equiv_{p}n_{1}, av_{2} \equiv_{p}n_{2}, \dots, av_{\frac{p-1}{2}} \equiv_{p}n_{\frac{p-1}{2}}$
+Тогда $a^ \frac{p-1}{2} \equiv_{p} n$

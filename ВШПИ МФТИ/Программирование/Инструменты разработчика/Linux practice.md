@@ -37,7 +37,7 @@
 `n. a. ls`
 b. ls -1
 c. ls -a
-d. ls -l
+d. ls -l 
 e. ls -l --sort=size
 f. ls -lt или ls -l --sort=time
 g. ls -l --sort=extension

@@ -1,1 +1,96 @@
- 
+##### Прямая на плоскости
+Задаётся:
+1. точкой на прямой и её направляющей $\bar{a} \neq 0$
+$\bar{r} - \bar{r}_{0} = t\bar{a} \iff \bar{r}=\bar{r}_{0}+t\bar{a}, t\in \mathbb{R}$, где $\bar{r}, \bar{r}_{0}$ - радиус векторы точек на прямой
+2. точкой на прямой и её нормалью $\bar{n} \neq 0$
+$(\bar{r} - \bar{r}_{0}, \bar{n}) = 0 \iff (\bar{r}, \bar{n}) = (\bar{r}_{0}, \bar{n}) = D$ - нормальное уравнение прямой
+
+Рассмотрим решения $(\bar{r}, \bar{n}) = D$
+$\bar{r}_{0} = \lambda \bar{n}$
+$(\lambda \bar{n}, \bar{n}) = D \iff \lambda=\frac{D}{|\bar{n}|^2}$
+
+$(\bar{r}_{0} \bar{n}) = D$ 
+$(\bar{r}_{1}, \bar{n}) = (\bar{r}_{0} + t_{1}\bar{a}, \bar{n}) = (\bar{r}_{0}, \bar{n}) + t_{1}(\bar{a}, \bar{n}) = D$
+$(\bar{r}_{1} - \bar{r}_{0}, \bar{n}) = 0 \implies \bar{r}_{1} - \bar{r}_{0} = t\bar{a} \iff \bar{r}_{1} = \bar{r}_{0} + t\bar{a}$
+
+Рассмотрим декартовую систему координат $\{ O, \bar{e}_{1}, \bar{e}_{2} \}$
+Пусть $r_{0} = (x_{0}, y_{0}), \bar{a} = (\alpha, \beta), \bar{r} = (x, y)$
+Тогда из $\bar{r} = \bar{r}_{0} + t\bar{a}$: 
+$x = x_{0} + \alpha t$
+$y = y_{0} + \beta t$
+
+$t = \frac{x-x_{0}}{\alpha} = \frac{y-y_{0}}{\beta}$ - каноническое уравнение прямой на плоскости
+$\beta(x - x_{0}) + \alpha(y - y_{0}) = 0$
+$\beta x - \alpha y + (-\beta x_{0}+\alpha y_{0}) = 0$
+$Ax + By + C = 0$ - общее уравнение прямой ($A \neq 0$ или $B \neq 0$)
+
+Тогда $\bar{a} = (\alpha, \beta) = (-B, A)$
+$\frac{\left( x+\frac{C}{A} \right)}{-B} = \frac{y}{A}$
+
+>**Лемма**
+>$\bar{a}(\alpha, \beta) || l : Ax + By + C = 0 \iff A\alpha + B\beta$ =0 
+
+*Доказательство*
+(**=>**) Пусть $\bar{a} || l$. Возьмём точки $P(x_{0}, y_{0}), Q(x_{1}, y_{1})$ на прямой $l : \bar{a} = PQ(x_{1} - x_{0}, y_{1} - y_{0})$
+$A(x_{1} - x_{0}) + B(y_{1} - y_{0}) = 0$
+
+(**<=**) $\bar{a}||l \iff \ \forall P \in l \to P + \bar{a} \in l$
+$Q = P + \bar{a}(x_{0} + \alpha, y_{0} + \beta)$
+$A(x_{0}+a) + B(y_{0}+\beta) +C = 0 \iff Ax_{0}+By_{0}+C + A\alpha + B\beta=0$ - выполняется
+
+>$l_{1}: A_{1}x + B_{1}y + C = 0, l_{2}:A_{2}x + B_{2}y + C = 0$
+>$l_{1} \ || \ l_{2} \iff (A_{1}, B_{1}) = \lambda(A_{2}, B_{2}), \lambda \neq 0 \iff A_{2}(-B_{1}) + B_{2}A_{1} = 0$
+
+>$l_{1}: A_{1}x + B_{1}y + C = 0, l_{2}:A_{2}x + B_{2}y + C = 0$
+>$l_{1} = l_{2} \iff (A_{1}, B_{1}, C_{1}) = \lambda(A_{2}, B_{2}, C_{2}), \lambda \neq 0$
+
+(**<=**) очев
+(**=>**) $A_{1}, B_{1} = \lambda(A_{2}, B_{2})$, т.к. ($l_{1}||l_{2}$)
+$A_{1}x_{0}+B_{1}y_{0}+C_{1} - \lambda(A_{2}x_{0} + B_{2}y_{0} + C_{2}) = 0$
+$(A_{1}-\lambda A_{2})x_{0} + (B_{1} - \lambda B_{2})y_{0} + C_{1}-\lambda C_{2} = 0$ - выполняется
+
+>$l: Ax + By + C = F(x, y) = 0$
+>Пусть $\{ P\ | \ F(P) > 0 \} = П_{+}$, $\{ P\ | \ F(P) < 0 \} = П_{-}$
+>Если $sign(F(P)) = sign(F(Q))$, то P и Q лежает по одну сторону от прямой $l$
+
+>**Пучок (собственный) прямых на плоскости** - множество всех прямых, проходящих через фиксированную точку $P_{0}$
+
+>$l_{i} = F_{i}(x, y) = A_{i}x + B_{i}y + C_{i} = 0$
+>$i = \{1, 2\}, l_{1} \neq l_{2}$
+>Уравнение любой прямой $m$ из пучка можно представить в виде 
+>$F(x, y) = \lambda F_{1}(x, y) + \nu  F_{2}(x,y), (\lambda, \nu) \neq (0, 0)$
+
+?$\lambda x + \nu y = 0$
+
+Пусть $l \in$ пучку, $Q \in l, Q \neq P, P$ - центр пучка
+$F(x, y) = F_{2}(Q)F_{1}(x, y) - F_{1}(Q)F_{2}(x, y) = 0$ - этому уравнению удовл. $P, Q$; $F_{1}(Q) \neq 0 \lor F_{2}(Q) \neq_{0}$
+$(A, B) = F_{2}(Q)(A_{1}, B_{1}) - F_{1}(Q)(A_{2}, B_{2})$
+
+>Для прямой $Ax + By + C = 0$ в ПДСК $\bar{n}(A, B)$ - её вектор нормали
+
+>Пусть $M(x_{1}, y_{1}), l:Ax + By + C = 0,$ система координат - ПДСК
+>$d(M, l) = \frac{|Ax_{1}+By_{1}+C|}{\sqrt{ A^2+B^2 }}$ - расстояние от $M$ до $l$
+
+Пусть $P(x_{0}, y_{0}) \in l, \bar{n} \perp l, m \perp l - прямая$
+$PM(x_{1}-x_{0}, y_{1}-y_{0})$
+$d(M, l) = |Пр_{N}PM| = \frac{|(PM, \bar{n})|}{|\bar{n}|} = \frac{|A(x_{1} -x_{0}) + B(y_{1} - y_{0})|}{\sqrt{ A^2+B^2 }} = \frac{|Ax_{1}+By_{1}+C-(Ax_{0}+By_{0}+C))|}{\sqrt{ A^2+B^2 }} = \frac{|Ax_{1}+By_{1}+C|}{\sqrt{ A^2+B^2 }}$
+
+>**Плоскость в пространстве**
+
+Задаётся: точкой $P$ плоскости и $\bar{a} not || \bar{b}$
+$[\bar{a}, \bar{b}] \neq 0, PQ = t\bar{a} + u\bar{b}$
+$\bar{r} = \bar{r}_{0} + t\bar{a} + u\bar{b}; t, u \in \mathbb{R}$
+$(PQ, \bar{a}, \bar{b}) = 0$
+$(\bar{r}, \bar{n}) = D$
+$(\bar{r} - \bar{r}_{0}, \bar{a}, \bar{b}) = (\bar{r} - \bar{r}_{0}, [\bar{a}, \bar{b}]) = (\bar{r} - \bar{r}_{0}, \bar{n}) = 0$
+
+$$
+(\bar{r} - \bar{r}_{0}, \bar{a}, \bar{b}) =
+\begin{vmatrix}
+x-x_{0} & y - y_{0} & z - z_{0} \\
+\alpha_{1} & \alpha_{2} & \alpha_{3} \\
+\beta_{1} & \beta_{2} & \beta_{3}
+\end{vmatrix} = 0
+$$
+
+$A(x - x_{0}) + B(x - x_{0}) + C(z - z_{0}) + D = 0$

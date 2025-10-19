@@ -189,10 +189,39 @@ $\ \forall a, b \in H \to a \circ b \in H, b^{-1} \in H \implies a \circ b^{-1} 
 $\ \forall a, b \in H \to a \circ b^{-1} \in H$
 $\implies a \circ a^{-1}=e \in H$ и $a \circ (b^{-1})^{-1} = a \circ b \in H$
 
+*Пример:* 
+Пусть $a \in G, ord(a) = n$
+Тогда $H = \{ e, a, a^2, \dots, a^{n-1} \} < G$
+
 ___
 
->Пусть $a \in G, ord(a) = n$
->Тогда $H = \{ e, a, a^2, \dots, a^{n-1} \} < G$
+>Пусть $H < G, g \in G$
+   Тогда $gH = \{ g \circ h \ | \ h \in H \}$ – **левый смежный класс** по подгруппе $H$ с представителем $g$
+
+*Пример:*
+$G = (\mathbb{Z}, +)$
+$H = 3\mathbb{Z} < \mathbb{Z}$ – числа, кратные 3
+
+Есть 3 смежных класса:
+$0 + 3\mathbb{Z}$
+$1 + 3\mathbb{Z}$
+$2 + 3\mathbb{Z}$
+
+___
+
+>Смежные классы либо не пересекаются, либо совпадают
+
+*Доказательство*
+Предположим, $z \in aH \cap bH \implies \ \exists h_{1}\in H, h_{2}\in H : z = ah_{1} = bh_{2}$
+Следовательно, $a = bh_{2}h_{1}^{-1}, b =ah_{1}h_{2}^{-1} \implies \ \forall t\in aH \ \exists \hbar : t=a\hbar = bh_{2}h_{1}^{-1}\hbar$
+$h_{2}h_{1}^{-1}\hbar \in H \implies t \in bH$
+
+Получаем, что если смежные классы перескаются, то $aH$ и $bH$ совпадают.
+Если же они не пересекаются, то они, очевидно, и не совпадают.
+
+
+
+
 
 
 

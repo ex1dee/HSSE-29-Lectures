@@ -92,34 +92,62 @@ $\Delta = 0 \iff AC = B^2 \iff Ax^2+2Bxy +Cy^2 = Ax^2 \pm 2\sqrt{ AC }xy + Cy^2 
 >Для любой линии $2$-го порядка можно найти такую ПДСК, что её уравнение принимает  один из 9 канонических видов
 
 *Доказательство*
-**1 шаг**: 
-к $B \geq 0, A \geq C$
-($x', y'$)
+Старая система координат: $(x, y)$
+Старая алгебраическая линия: $Ax^2+2Bxy+Cy^2+2Dx+2Ey+F=0$
 
-Пусть $B > 0$. Покажем, что найдётся такой угол поворота, что $B = 0 $
+Новая система координат: $(x', y')$
+Новая алгебраическая линия: $A'x'^2+2B'x'y'+C'y'^2+2D'x'+2E'y'+F'=0$
+
+**1 шаг**. Найдём такой угол поворота $\alpha$, чтобы $B'=0$
+Без ограничения общности $B > 0$. Формулы поворота на угол $\alpha$:
 $x = x'\cos \alpha - y'\sin \alpha$
-$y = y'\sin\alpha + y'\cos\alpha$
+$y = x'\sin\alpha + y'\cos\alpha$
 
+Подставим $(x, y)$ в уравнение старой линии:
+$A(x'\cos\alpha - y'\sin\alpha)^2 + 2B(x'\cos\alpha - y'\sin\alpha)(x'\sin\alpha + y'\cos\alpha) + C(x'\sin\alpha + y'\cos\alpha)^2 + \dots= 0$
+
+$Ax'^2\cos^2\alpha - 2Ax'y'\cos\alpha \sin\alpha + Ay'^2\sin^2\alpha + 2Bx'^2\cos\alpha \sin\alpha + 2Bx'y'\cos^2a - 2Bx'y'\sin^2a -$ 
+$- 2By'^2\cos\alpha \sin\alpha + Cx'^2\sin^2a + 2Cx'y'\cos\alpha \sin\alpha + Cy'^2\cos^2\alpha + \dots= 0$
+
+$(A\cos^2a + 2B\cos\alpha \sin\alpha + C\sin^2a)x'^2 + (-2A\cos\alpha \sin\alpha + 2B(\cos^2a - \sin^2a) + 2C\cos\alpha \sin\alpha)x'y' +$
+$+ (A\sin^2a - 2B\cos a\sin\alpha + C\cos^2a)y'^2 + \dots = 0$
+
+Получаем следующие коэффициенты:
 $A' = A\cos^2\alpha + 2B\cos\alpha \sin\alpha + C\sin^2\alpha$
 $2B' = A(-2\sin\alpha \cos\alpha) + 2B(\cos^2\alpha-\sin^2\alpha) + C(2\sin\alpha \cos\alpha)$
 $C' = A\sin^2\alpha - 2B\sin\alpha \cos\alpha+C\cos^2\alpha$
 
+$2B' = -A\sin 2\alpha + 2B\cos 2\alpha + C\sin 2\alpha = (C - A)\sin 2\alpha + 2B\cos 2\alpha = 0$
+Возможны следующие случаи:
+1. $A = C \implies 2B\cos 2\alpha =0 \implies$ т.к. $B>0$, то $\cos 2\alpha = 0 \implies \alpha = \frac{\pi}{4}$
+2. $A \neq C \implies$ делим на $\cos 2\alpha$: $(C-A)tg 2\alpha + 2B = 0 \iff tg 2\alpha = \frac{2B}{A-C}$
+
+**Итог**: мы всегда можем выбрать $\alpha$ так, чтобы в новой системе координат уравнение линии не содержало члена $x'y'$. Теперь мы работаем с уравнением $A'x'^2 + C'y'^2 + 2D'x' + 2E'y' + F' = 0$
+
+**2 шаг.** Упрощение уравнения
 $$
-\Delta=\begin{vmatrix}
-A & B \\
-B & C
-\end{vmatrix} = \begin{vmatrix}
+\Delta = \begin{vmatrix}
 A' & B' \\
 B' & C'
-\end{vmatrix}
+\end{vmatrix} = A'C' - B'^2 = A'C'
 $$
 
-$A' + C' = A + C$
-$2B\cos 2\alpha - A\sin \alpha = 0$
-$A = C \implies \alpha = \frac{\pi}{4}$
-$A\neq C = > tg 2\alpha = \frac{2B}{A - C}$
+Возможны следующие случаи:
+1. $\Delta > 0$
 
-2
+Тогда $A'C' >0$. Будем считать $A' >0, C'>0$ (умножив всё уравнение на $-1$ при необходимости)
+
+Выделяем полные квадраты:
+$A'\left( x'^2 + \frac{2D'}{A'}x' \right) + C'\left( y'^2 + \frac{2E'}{C'}y' \right) + F' = 0$
+$A'\left( x' + \frac{D'}{A'} \right)^2 + C'\left( y' + \frac{E'}{C'} \right)^2 = \frac{D'^2}{A'} + \frac{E'^2}{C'} - F'$
+
+Вводим новые координаты 
+$x'' = x' + \frac{D'}{A'}$
+$y'' = y' + \frac{E'}{C'}$
+
+Получаем:
+$A'x'' + C'y'' = M$, где $M = \frac{D'^2}{A'} + \frac{E'^2}{C'} - F'$
+
 $Ax^2+Cy^2+2Dx+2Ey+F = 0$
 $\Delta > 0 \implies AC > 0, A, C \neq 0$
 $\Delta < 0 \implies AC < 0, A,C \neq 0$

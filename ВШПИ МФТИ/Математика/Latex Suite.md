@@ -31,6 +31,8 @@
 * $\parallel$ - Параллельно (par)
 * $\nparallel$ - Не параллельно (npar)
 * $ord$ - Порядок элемента (ORD)
+* $\triangleleft$ - Является нормальной подгруппой (subnrm)
+* $\triangleright$ - Имеет нормальную подгруппу (supnrm)
 * $\oplus$ - XOR (o+)
 
 Крупные объекты

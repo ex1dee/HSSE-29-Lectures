@@ -13,11 +13,10 @@ sudo chmod +x /usr/local/bin/docker-compose
 ##### 2. (Опционально) Установка плагина Docker в IDEA
 ##### 3. Создание конфигураций в IDEA
 
-![[Pasted image 20251102190514.png]]
 Нажимаем на:
 1. Текущую конфигурацию (Слева от кнопки запуска)
 2. Edit configurations
-3. Плюсик 
+3. Плюсик
 4. Docker $\to$ Dockerfile
 5. В "Image tag" вводим "cloud-storage-app"
 6. Плюсик
@@ -29,3 +28,4 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 1. После изменения кода или pom.xml выбираем конфиг "Docker" и запускаем его (Shift+F10)
 2. Для запуска сервисов (оркестрации) выбираем конфиг "Docker compose" и запускаем его (Shift+F10)
+

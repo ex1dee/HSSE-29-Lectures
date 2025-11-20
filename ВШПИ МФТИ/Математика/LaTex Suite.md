@@ -34,6 +34,7 @@
 * $\triangleleft$ - Является нормальной подгруппой (subnrm)
 * $\triangleright$ - Имеет нормальную подгруппу (supnrm)
 * $\oplus$ - XOR (o+)
+* $\xrightarrow{\text{text}}$ (xra)
 
 Крупные объекты
 * $\begin{pmatrix}a_{11}&a_{12}&a_{13} \\a_{21}&a_{22}&a_{23}\end{pmatrix}$ - Матрица (перечисление в строке через &)

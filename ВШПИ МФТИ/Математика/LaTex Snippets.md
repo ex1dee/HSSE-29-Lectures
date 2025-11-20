@@ -5,6 +5,8 @@
 	{trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
     // Other
+    {trigger: "|", replacement: "\\ | \\ {$0}", options: "mA"},
+    {trigger: "xra", replacement: "\\xrightarrow{$0}", options: "mA"},
     {trigger: "ORD", replacement: "ord", options: "mA"},
     {trigger: "comp", replacement: "\\circ", options: "mA"},
     {trigger: "neg", replacement: "\\neg", options: "mA"},

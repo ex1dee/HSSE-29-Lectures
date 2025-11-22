@@ -262,7 +262,7 @@
 	{trigger: "matrix", replacement: "\\begin{matrix}$0\\end{matrix}", options: "nA"},
     {trigger: "all", replacement: "\\ \\forall", options: "mA"},
  
-	{trigger: "cases", replacement: "\\begin{cases}\n$0\n\\end{cases}", options: "mA"},
+	{trigger: "cases", replacement: "\\begin{cases}$0\\end{cases}", options: "mA"},
 	{trigger: "align", replacement: "\\begin{align}\n$0\n\\end{align}", options: "mA"},
 	{trigger: "array", replacement: "\\begin{array}\n$0\n\\end{array}", options: "mA"},
     {trigger: "seq", replacement: "\\left[ \\begin{array}{l}\n$0\n\\end{array} \\right.", options: "mA"},

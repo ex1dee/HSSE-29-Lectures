@@ -5,7 +5,7 @@
 	{trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
     // Other
-    {trigger: "|", replacement: "|$0|", options: "mA"},
+    {trigger: "len", replacement: "|$0|", options: "mA"},
     {trigger: "so", replacement: "\\ | \\ {$0}", options: "mA"},
     {trigger: "xra", replacement: "\\xrightarrow{$0}", options: "mA"},
     {trigger: "ORD", replacement: "ord", options: "mA"},
@@ -14,6 +14,8 @@
     {trigger: "isom", replacement: "\\cong", options: "mA"},
     {trigger: "subnrm", replacement: "\\triangleleft", options: "mA"},
     {trigger: "supnrm", replacement: "\\triangleright", options: "mA"},
+    {trigger: "prec", replacement: "\\prec", options: "mA"},
+    {trigger: "preq", replacement: "\\preceq", options: "mA"},
  
     // Dashes
 	 {trigger: "--", replacement: "–", options: "tA"},

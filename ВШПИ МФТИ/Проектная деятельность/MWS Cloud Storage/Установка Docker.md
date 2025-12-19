@@ -22,7 +22,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 6. Плюсик
 7. Docker $\to$ Docker compose
 8. В "Compose files" вводим "./docker-compose.yml; "
-9. В "Services" вводим "app, postgres,"
+9. В "Services" вводим "app, postgres,minio"
 
 ##### 4. Запуск сервисов
 

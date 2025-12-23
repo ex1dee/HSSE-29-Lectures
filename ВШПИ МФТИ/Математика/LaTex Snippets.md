@@ -11,7 +11,7 @@
     {trigger: "ORD", replacement: "ord", options: "mA"},
     {trigger: "comp", replacement: "\\circ", options: "mA"},
     {trigger: "neg", replacement: "\\neg", options: "mA"},
-    {trigger: "isom", replacement: "\\cong", options: "mA"},
+    {trigger: "izom", replacement: "\\cong", options: "mA"},
     {trigger: "subnrm", replacement: "\\triangleleft", options: "mA"},
     {trigger: "supnrm", replacement: "\\triangleright", options: "mA"},
     {trigger: "prec", replacement: "\\prec", options: "mA"},

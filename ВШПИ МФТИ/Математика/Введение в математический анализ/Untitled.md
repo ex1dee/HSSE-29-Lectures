@@ -1,3 +1,2 @@
-$M \in R$ является супремумом множества $A$ $\iff$
-1) $\ \forall a \in A \to a \leq M$
-2) $\ \forall M' < M \ \exists a \in A : a > M'$
+$\overline{\lim}_{ n \to \infty }x_{n} = inf_{n\in \mathbb{N}}(sup_{k\geq n}x_{k})$
+$\underline{\lim}_{ n \to \infty }x_{n} = sup_{n\in \mathbb{N}}(inf_{k\geq n}x_{k})$

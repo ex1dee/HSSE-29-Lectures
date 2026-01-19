@@ -251,6 +251,12 @@
     {trigger: "outer", replacement: "\\ket{${0:\\psi}} \\bra{${0:\\psi}} $1", options: "mA"}, 
  
     // Environments
+    {
+      "trigger": "amat",
+      "replacement": "\\left(\\begin{array}{$0|c}\n$1\n\\end{array}\\right)$2",
+      "options": "mA",
+      "description": "Расширенная матрица"
+    },
 	{trigger: "pmat", replacement: "\\begin{pmatrix}\n$0\n\\end{pmatrix}", options: "MA"},
 	{trigger: "bmat", replacement: "\\begin{bmatrix}\n$0\n\\end{bmatrix}", options: "MA"},
 	{trigger: "Bmat", replacement: "\\begin{Bmatrix}\n$0\n\\end{Bmatrix}", options: "MA"},

@@ -1,20 +1,72 @@
+### 1
+
+1. $$
+\begin{array}c
+\alpha e_{1} + \beta e_{2} = e_{1}' \\
+\begin{cases}\alpha + \beta = 2 \\
+\beta=1\end{cases} \implies \alpha = 1 \\
+\alpha'e_{1} + \beta'e_{2} = e_{2}' \\
+\begin{cases}\alpha+\beta=1 \\
+\beta =2\end{cases} \implies \alpha = -1 \\
+Получаем: \begin{cases}e_{1} + e_{2} = e_{1}' \\
+-e_{1} + 2e_{2} = e_{2}'\end{cases} \\
+C = \begin{pmatrix}
+1  & -1 \\
+1 & 2
+\end{pmatrix}
+\end{array}
 $$
-\begin{cases}
-x(t) = t\cos t + \sin t \\
-y(t) = \cos t + 2t \\
-z(t) = t
-\end{cases}
+2. $$
+\begin{array}c
+\text{Пусть } a(x_{1}, y_{1}) \to a(x_{1}', y_{1}'), b(x_{2}, y_{2}) \to b(x_{2}', y_{2}') \\
+a = \begin{pmatrix}
+1 & -1 \\
+1 & 2
+\end{pmatrix} \cdot \begin{pmatrix}
+3 \\
+-1
+\end{pmatrix} = \begin{pmatrix}
+4 \\
+1
+\end{pmatrix} \\
+b = \begin{pmatrix}
+2 \\ 
+3
+\end{pmatrix} = \begin{pmatrix}
+1 & -1 \\
+1 & 2
+\end{pmatrix} \cdot \begin{pmatrix}
+x_{2}' \\
+y_{2}'
+\end{pmatrix} \\
+\text{Найдём матрицу, обратную } C \\
+C = \left(\begin{array}{cc|cc}
+1 & -1 & 1 & 0 \\
+1 & 2 & 0 & 1
+\end{array}\right) = \left(\begin{array}{cc|cc}
+1 & -1 & 1 & 0 \\
+0 & 3 & -1 & 1
+\end{array}\right) = \left(\begin{array}{cc|cc}
+1 & 0 & -\frac{1}{3} & \frac{4}{3} \\
+0 & 3 & -1 & 1
+\end{array}\right) = \left(\begin{array}{cc|cc}
+1 & 0 & -\frac{1}{3} & \frac{4}{3} \\
+0 & 1 & -\frac{1}{3} & \frac{1}{3}
+\end{array}\right) \\
+C^{-1} = \begin{pmatrix}
+-\frac{1}{3} & \frac{4}{3} \\
+-\frac{1}{3} & \frac{1}{3}
+\end{pmatrix} \\
+b = C^{-1}\cdot\begin{pmatrix}
+2 \\
+3
+\end{pmatrix} = \begin{pmatrix}
+\frac{10}{3} \\
+\frac{1}{3}
+\end{pmatrix} \\
+ \\
+
+\end{array}
 $$
 
-$$r(t) = (t\cos t + \sin t, \cos t + 2t, t)$$
-$$
-r'(t) = (\cos t - t\sin t + \cos t, 2 - \sin t, 1) = (2\cos t - t\sin t, 2 - \sin t, 1) = (2, 2, 1)
-$$
-$$
-r''(t) = (-2\sin t - \sin t - t \cos t, 2 - \cos t, 0) = (-1, 1, 0)
-$$
-$$
-r'(t) \times r''(t) = (-1, 1, 4), |r'(t) \times r''(t)| = \sqrt{ 18 } = 3\sqrt{ 2 }
-$$
-$|r'(t)|^3 = 27$
-$k = \frac{\sqrt{ 2 }}{9}$
+### 2

@@ -71,3 +71,18 @@ $$
 
 ### 2
 
+1. $$
+\begin{array}c
+C = \begin{pmatrix}
+\cos \phi & -\sin \phi \\
+\sin \phi  & \cos \phi
+\end{pmatrix} \\
+
+\begin{cases} x = -y' + 2 \\
+y =x' - 1 \end{cases}
+\end{array}
+$$
+
+2. $$
+
+$$

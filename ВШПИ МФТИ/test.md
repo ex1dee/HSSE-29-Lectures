@@ -1,10 +1,1 @@
-$$
-(x, kx + c)
-\begin{cases}x' =  \\
-y' =\end{cases}
-
-$$
-$$
-y' = kx'+ c
-
-$$
+1. $cl E \subseteq E \iff \begin{cases}intE \subseteq E - \text{выполнено всегда}\\ \delta E \subseteq E \end{cases} \iff (3) \iff \begin{cases}Iso(E) \subseteq E - \text{всегда} \\ E' \subseteq E \end{cases} \iff (2)$

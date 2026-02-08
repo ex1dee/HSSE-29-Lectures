@@ -1,1 +1,2 @@
-1. $cl E \subseteq E \iff \begin{cases}intE \subseteq E - \text{выполнено всегда}\\ \delta E \subseteq E \end{cases} \iff (3) \iff \begin{cases}Iso(E) \subseteq E - \text{всегда} \\ E' \subseteq E \end{cases} \iff (2)$
+$\{ z_{n_{k}} \}\to z* : \lim_{ k \to \infty }\rho(x, z_{n_{k}}) = p(x, F)$
+$z*$ – это и есть $y$?

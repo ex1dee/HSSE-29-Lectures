@@ -1,7 +1,15 @@
 $$
-\left(\begin{array}{cccc|c}
-2 & -1 & 2 & 0 & 1 \\
-1 & 1 & 7 & -3 & 2\\
--1 & 1 & 1 & -1 & 0
+\left(\begin{array}{ccc|c}
+0 & 1 & 2 & 0 \\
+-1 & 0 & -2 & 1 \\
+-2 & 2 & 0 & 2
+\end{array}\right) \to \left(\begin{array}{ccc|c}
+-2 & 2 & 0 & 2 \\
+-1 & 0 & -2 & 1 \\
+0 & 1 & 2 & 0
+\end{array}\right) \to \left(\begin{array}{ccc|c}
+-2 & 2 & 0 & 2 \\
+0 & 1 & -2 & 2 \\
+0 & 0 & 4 & -1
 \end{array}\right)
 $$

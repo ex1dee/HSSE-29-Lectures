@@ -1,5 +1,8 @@
 $$
-y + 2z = 0
--x - 2z = 1
--2x + 2y = 2
+\begin{pmatrix}
+1 & 1 \\
+1 & 2 \\
+1 & 1 \\
+1 & 3
+\end{pmatrix}
 $$

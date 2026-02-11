@@ -5,6 +5,7 @@
 	{trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
     // Other
+    {trigger: "scal", replacement: "\\langle $0 \\rangle $1", options: "mA"},
     {trigger: "darr", replacement: "\\downarrow", options: "mA"},
     {trigger: "uarr", replacement: "\\uparrow", options: "mA"},
     {trigger: "len", replacement: "\\textbar $0 \\textbar$1", options: "mA"},

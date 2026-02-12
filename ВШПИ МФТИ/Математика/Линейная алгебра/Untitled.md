@@ -159,7 +159,7 @@ $A' = PAQ$, где $P, Q$ — элементарные матрицы
 Тогда $\begin{cases}rgAS \leq rg A \\ rg(AS)S^{-1}=rgA \leq rgAS\end{cases}\implies rgAS=rgA$
 
 патом
-
+	
 
 
 

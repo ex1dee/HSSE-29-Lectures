@@ -1,1 +1,1 @@
-$\sqrt{ \sum (x_{k} + y_{k})^2}$
+$^p\sqrt{\sum |x_{k}+y_{k}|^p} \leq \sum ^p\sqrt{|x|_{k}^p} +\sum ^p\sqrt{|y|_{k}^p}$

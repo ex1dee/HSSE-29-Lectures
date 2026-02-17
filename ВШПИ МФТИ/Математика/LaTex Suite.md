@@ -89,6 +89,9 @@ $$
 * $\widehat{\mathbb{R}}$ - R с крышечкой (ERR)
 * $\mathbb{C}$ - Комплексные числа (CC)
 
+Прочее
+- $\color{red}r\color{green}g\color{blue}b$ - Цветной текст (clr)
+
 | Trigger | Replacement | Trigger | Replacement |
 | ------- | ----------- | ------- | ----------- |
 | @a      | \alpha      | eta     | \eta        |

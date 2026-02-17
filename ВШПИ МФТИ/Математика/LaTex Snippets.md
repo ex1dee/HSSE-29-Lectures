@@ -5,6 +5,7 @@
 	{trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
     // Other
+    {trigger: "clr", replacement: "\\color{$0}$1", options: "mA"},
     {trigger: "scal", replacement: "\\langle $0 \\rangle $1", options: "mA"},
     {trigger: "darr", replacement: "\\downarrow", options: "mA"},
     {trigger: "uarr", replacement: "\\uparrow", options: "mA"},
@@ -63,7 +64,7 @@
 	{trigger: "sts", replacement: "_\\text{$0}", options: "mA"},
 	{trigger: "sq", replacement: "\\sqrt{ $0 }$1", options: "mA"},
 	{trigger: "//", replacement: "\\frac{$0}{$1}$2", options: "mA"},
-	{trigger: "ee", replacement: "e^{ $0 }$1", options: "mA"},
+	//{trigger: "ee", replacement: "e^{ $0 }$1", options: "mA"},
     {trigger: "rev", replacement: "^{-1}", options: "mA"},
     {trigger: /([A-Za-z])(\d)/, replacement: "[[0]]_{[[1]]}", options: "rmA", description: "Auto letter subscript", priority: -1},
  
@@ -135,7 +136,7 @@
     {trigger: "nabl", replacement: "\\nabla", options: "mA"},
     {trigger: "xx", replacement: "\\times", options: "mA"},
     {trigger: "**", replacement: "\\cdot", options: "mA"},
-    {trigger: "par", replacement: "\\parallel", options: "mA"},
+    {trigger: "paral", replacement: "\\parallel", options: "mA"},
     {trigger: "npar", replacement: "\\nparallel", options: "mA"},
  
 	{trigger: "===", replacement: "\\equiv", options: "mA"},
@@ -205,7 +206,7 @@
  
  
     // Derivatives and integrals
-    {trigger: "par", replacement: "\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2", options: "m"},
+    {trigger: "part", replacement: "\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2", options: "mA"},
     {trigger: /pa([A-Za-z])([A-Za-z])/, replacement: "\\frac{ \\partial [[0]] }{ \\partial [[1]] } ", options: "rm"},
     {trigger: "ddt", replacement: "\\frac{d}{dt} ", options: "mA"},
  

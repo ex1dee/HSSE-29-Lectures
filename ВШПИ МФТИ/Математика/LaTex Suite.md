@@ -91,6 +91,8 @@ $$
 
 Прочее
 - $\color{red}r\color{green}g\color{blue}b$ - Цветной текст (clr)
+- $\quad$ - Обычный отступ (qd)
+- $\qquad$ - Двойной отступ (qqd)
 
 | Trigger | Replacement | Trigger | Replacement |
 | ------- | ----------- | ------- | ----------- |

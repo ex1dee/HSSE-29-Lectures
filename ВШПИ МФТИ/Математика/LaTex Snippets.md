@@ -5,6 +5,8 @@
 	{trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
     // Other
+    {trigger: "qd", replacement: "\\quad", options: "mA"},
+    {trigger: "qqd", replacement: "\\qquad", options: "mA"},
     {trigger: "clr", replacement: "\\color{$0}$1", options: "mA"},
     {trigger: "scal", replacement: "\\langle $0 \\rangle $1", options: "mA"},
     {trigger: "darr", replacement: "\\downarrow", options: "mA"},

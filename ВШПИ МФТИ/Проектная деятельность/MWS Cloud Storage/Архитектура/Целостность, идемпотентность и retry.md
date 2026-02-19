@@ -24,7 +24,7 @@
 - Долгий **PENDING**/Долгий **ERROR** + **UPLOAD** => удаление
 - Долгий **PENDING**/**ERROR** + **DELETE** => `server-side retry`
 	*Сразу после ошибки в **DELETE** делаем один `server-side retry`*
-- Долгий **PENDING**/**ERROR** + **CHANGE_METADATA** => откат 
+- Долгий **PENDING**/**ERROR** + **CHANGE_METADATA** => разблокировка файла 
 	*Сразу после ошибки в **CHANGE_METADATA** делаем откат + `client-side retry`*
 
 #### Retry

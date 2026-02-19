@@ -89,10 +89,12 @@ $$
 * $\widehat{\mathbb{R}}$ - R с крышечкой (ERR)
 * $\mathbb{C}$ - Комплексные числа (CC)
 
-Прочее
+Форматирование
 - $\color{red}r\color{green}g\color{blue}b$ - Цветной текст (clr)
 - $\quad$ - Обычный отступ (qd)
 - $\qquad$ - Двойной отступ (qqd)
+- $\mathbf{v}$ - Жирный шрифт с прямым начертанием (bf)
+- $\bbox[5px, border: 1px solid red]{asdasd}$ - Красная рамка (box)
 
 | Trigger | Replacement | Trigger | Replacement |
 | ------- | ----------- | ------- | ----------- |

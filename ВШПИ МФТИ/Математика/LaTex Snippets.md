@@ -5,6 +5,7 @@
 	{trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
     // Other
+    {trigger: "box", replacement: "\\bbox[5px, border: 1px solid salmon]{$0}$1", options: "mA"},
     {trigger: "qd", replacement: "\\quad", options: "mA"},
     {trigger: "qqd", replacement: "\\qquad", options: "mA"},
     {trigger: "clr", replacement: "\\color{$0}$1", options: "mA"},
@@ -208,7 +209,7 @@
  
  
     // Derivatives and integrals
-    {trigger: "part", replacement: "\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2", options: "mA"},
+    {trigger: "part", replacement: "\\frac{ \\partial ${0:f} }{ \\partial ${1:x} } $2", options: "mA"},
     {trigger: /pa([A-Za-z])([A-Za-z])/, replacement: "\\frac{ \\partial [[0]] }{ \\partial [[1]] } ", options: "rm"},
     {trigger: "ddt", replacement: "\\frac{d}{dt} ", options: "mA"},
  

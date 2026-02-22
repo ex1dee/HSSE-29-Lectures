@@ -14,7 +14,7 @@
     {trigger: "darr", replacement: "\\downarrow", options: "mA"},
     {trigger: "uarr", replacement: "\\uparrow", options: "mA"},
     {trigger: "len", replacement: "\\textbar $0 \\textbar$1", options: "mA"},
-    {trigger: "so", replacement: "\\textbar $0", options: "mA"},
+    {trigger: "so", replacement: "\\mid", options: "mA"},
     {trigger: "xra", replacement: "\\xrightarrow{$0}", options: "mA"},
     {trigger: "ORD", replacement: "ord", options: "mA"},
     {trigger: "comp", replacement: "\\circ", options: "mA"},

@@ -5,6 +5,7 @@
 	{trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
     // Other
+    {trigger: "|-", replacement: "\\vdash", options: "mA"},
     {trigger: "box", replacement: "\\bbox[5px, border: 1px solid salmon]{$0}$1", options: "mA"},
     {trigger: "qd", replacement: "\\quad", options: "mA"},
     {trigger: "qqd", replacement: "\\qquad", options: "mA"},

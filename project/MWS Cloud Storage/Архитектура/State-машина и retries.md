@@ -22,10 +22,11 @@
 	Причина `ERROR`
 #### Фоновая очистка (раз в некоторое время)
 - Долгий **PENDING**/Долгий **ERROR** + **UPLOAD** => удаление
+	*Сразу после ошибки делаем `client-side retry`*
 - Долгий **PENDING**/**ERROR** + **DELETE** => `server-side retry`
-	*Сразу после ошибки в **DELETE** делаем один `server-side retry`*
+	*Сразу после ошибки делаем один `server-side retry`*
 - Долгий **PENDING**/**ERROR** + **CHANGE_METADATA** => разблокировка файла 
-	*Сразу после ошибки в **CHANGE_METADATA** делаем откат + `client-side retry`*
+	*Сразу после ошибки делаем откат + `client-side retry`*
 
 #### Retry
 Если слишком много попыток, то помечаем запись как `FATAL` и пишем в логи критическую ошибку

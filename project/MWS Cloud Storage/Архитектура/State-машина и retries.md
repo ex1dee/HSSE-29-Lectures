@@ -20,13 +20,17 @@
 	Счётчик попыток `retry`
 - **error_message**
 	Причина `ERROR`
-#### Фоновая очистка (раз в некоторое время)
-- Долгий **PENDING**/Долгий **ERROR** + **UPLOAD** => удаление
-	*Сразу после ошибки делаем `client-side retry`*
-- Долгий **PENDING**/**ERROR** + **DELETE** => `server-side retry`
-	*Сразу после ошибки делаем один `server-side retry`*
-- Долгий **PENDING**/**ERROR** + **CHANGE_METADATA** => разблокировка файла 
-	*Сразу после ошибки делаем откат + `client-side retry`*
-
-#### Retry
-Если слишком много попыток, то помечаем запись как `FATAL` и пишем в логи критическую ошибку
+	#### Фоновая очистка (раз в некоторое время)
+	- Долгий **PENDING**/Долгий **ERROR** + **UPLOAD** => удаление
+	- Долгий **PENDING**/**ERROR** + **DELETE** => `server-side retry`
+	- Долгий **PENDING**/**ERROR** + **CHANGE_METADATA** => разблокировка файла `*
+	
+	#### Retry
+	
+	- Если слишком много попыток, то помечаем запись как `FATAL` и пишем в логи критическую ошибку
+	- Используем `Failsafe` для каждой операции в `StorageRepositoryWrapper`
+	
+	После неудачного `Failsafe` при:
+	- **UPLOAD**: `client-side retry`
+	- **DELETE**: `nothing`
+	- **CHANGE_METADATA**: `rollback` + `client-side retry`

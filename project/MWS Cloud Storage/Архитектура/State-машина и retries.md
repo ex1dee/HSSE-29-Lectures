@@ -25,12 +25,24 @@
 	- Долгий **PENDING**/**ERROR** + **DELETE** => `server-side retry`
 	- Долгий **PENDING**/**ERROR** + **CHANGE_METADATA** => разблокировка файла `*
 	
-	#### Retry
-	
-	- Если слишком много попыток, то помечаем запись как `FATAL` и пишем в логи критическую ошибку
-	- Используем `Failsafe` для каждой операции в `StorageRepositoryWrapper`
-	
-	После неудачного `Failsafe` при:
-	- **UPLOAD**: `client-side retry`
-	- **DELETE**: `nothing`
-	- **CHANGE_METADATA**: `rollback` + `client-side retry`
+#### Retry
+
+- Если слишком много попыток, то помечаем запись как `FATAL` и пишем в логи критическую ошибку
+- Используем `Failsafe` для каждой операции в `StorageRepositoryWrapper`
+
+После неудачного `Failsafe` при:
+- **UPLOAD**: `client-side retry`
+- **DELETE**: `nothing`
+- **CHANGE_METADATA**: `rollback` + `client-side retry`
+
+#### Resumable upload
+
+**$server \to client$**
+- Ловим исключение в враппере, не увеличиваем счетчик retry
+- Бросаем исключение в сервис, он принимает его, удаляет недозагруженную часть
+- Контроллер ловит это исключение, отправляет клиенту сообщение о том, что нужно догрузить все, начиная с $n$-го чанка
+- Цикл чанковой загрузки прерывается в виртуальном потоке
+
+**$client \to server$**
+- Клиент шлет серверу `HttpRequest` на возобновление загрузки
+

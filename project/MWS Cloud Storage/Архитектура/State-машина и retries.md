@@ -33,7 +33,7 @@
 После неудачного `Failsafe` при:
 - **UPLOAD**: `client-side retry`
 - **DELETE**: `nothing`
-- **CHANGE_METADATA**: `rollback` + `client-side retry`
+- **CHANGE_METADATA**: `client-side retry`
 
 #### Resumable upload
 

@@ -139,7 +139,7 @@
     {trigger: "...", replacement: "\\dots", options: "mA"},
     {trigger: "nabl", replacement: "\\nabla", options: "mA"},
     {trigger: "xx", replacement: "\\times", options: "mA"},
-    {trigger: "**", replacement: "\\cdot", options: "mA"},
+    {trigger: "c.", replacement: "\\cdot", options: "mA"},
     {trigger: "paral", replacement: "\\parallel", options: "mA"},
     {trigger: "npar", replacement: "\\nparallel", options: "mA"},
  
@@ -157,8 +157,10 @@
     {trigger: "<->", replacement: "\\leftrightarrow ", options: "mA"},
 	{trigger: "->", replacement: "\\to", options: "mA"},
 	{trigger: "!>", replacement: "\\mapsto", options: "mA"},
-    {trigger: "=>", replacement: "\\implies", options: "mA"},
-	{trigger: "=<", replacement: "\\impliedby", options: "mA"},
+    {trigger: "==>", replacement: "\\implies", options: "mA"},
+    {trigger: "==<", replacement: "\\impliesby", options: "mA"},
+    {trigger: "=>", replacement: "\\Rightarrow", options: "mA"},
+	{trigger: "=<", replacement: "\\Leftarrow", options: "mA"},
  
 	{trigger: "and", replacement: "\\cap", options: "mA"},
 	{trigger: "or", replacement: "\\cup", options: "mA"},
@@ -176,6 +178,7 @@
  
 	{trigger: "LL", replacement: "\\mathcal{L}", options: "mA"},
 	{trigger: "HH", replacement: "\\mathcal{H}", options: "mA"},
+    {trigger: "EE", replacement: "\\mathcal{E}", options: "mA"},
 	{trigger: "CC", replacement: "\\mathbb{C}", options: "mA"},
 	{trigger: "RR", replacement: "\\mathbb{R}", options: "mA"},
 	{trigger: "ZZ", replacement: "\\mathbb{Z}", options: "mA"},
@@ -210,7 +213,7 @@
  
  
     // Derivatives and integrals
-    {trigger: "part", replacement: "\\frac{ \\partial ${0:f} }{ \\partial ${1:x} } $2", options: "mA"},
+    {trigger: "part", replacement: "\\frac{ \\partial $0 }{ \\partial $1 }$2", options: "mA"},
     {trigger: /pa([A-Za-z])([A-Za-z])/, replacement: "\\frac{ \\partial [[0]] }{ \\partial [[1]] } ", options: "rm"},
     {trigger: "ddt", replacement: "\\frac{d}{dt} ", options: "mA"},
  

@@ -157,8 +157,8 @@
     {trigger: "<->", replacement: "\\leftrightarrow ", options: "mA"},
 	{trigger: "->", replacement: "\\to", options: "mA"},
 	{trigger: "!>", replacement: "\\mapsto", options: "mA"},
-    {trigger: "==>", replacement: "\\implies", options: "mA"},
-    {trigger: "==<", replacement: "\\impliesby", options: "mA"},
+    {trigger: "==>", replacement: "\\Longrightarrow", options: "mA"},
+    {trigger: "==<", replacement: "\\Longleftarrow", options: "mA"},
     {trigger: "=>", replacement: "\\Rightarrow", options: "mA"},
 	{trigger: "=<", replacement: "\\Leftarrow", options: "mA"},
  
@@ -175,7 +175,8 @@
 	{trigger: "eset", replacement: "\\emptyset", options: "mA"},
 	{trigger: "set", replacement: "\\{ $0 \\}$1", options: "mA"},
 	{trigger: "e\\xi sts", replacement: "\\ \\exists", options: "mA", priority: 1},
- 
+
+    {trigger: "PP", replacement: "\\mathcal{P}", options: "mA"},
 	{trigger: "LL", replacement: "\\mathcal{L}", options: "mA"},
 	{trigger: "HH", replacement: "\\mathcal{H}", options: "mA"},
     {trigger: "EE", replacement: "\\mathcal{E}", options: "mA"},

@@ -100,6 +100,7 @@ $$
 - $\qquad$ - Двойной отступ (qqd)
 - $\mathbf{v}$ - Жирный шрифт с прямым начертанием (bf)
 - $\bbox[5px, border: 1px solid red]{asdasd}$ - Красная рамка (box)
+- $\text{text}$ - Текст (txt)
 
 | Trigger | Replacement | Trigger | Replacement |
 | ------- | ----------- | ------- | ----------- |

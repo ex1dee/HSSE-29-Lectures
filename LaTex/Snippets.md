@@ -57,7 +57,7 @@
 	{trigger: "Ome", replacement: "\\Omega", options: "mA"},
  
     // Text environment
-    {trigger: "text", replacement: "\\text{$0}$1", options: "mA"},
+    {trigger: "txt", replacement: "\\text{$0}$1", options: "mA"},
     {trigger: "\"", replacement: "\\text{$0}$1", options: "mA"},
  
     // Basic operations

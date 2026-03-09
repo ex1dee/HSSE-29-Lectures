@@ -35,7 +35,7 @@
 - **DELETE**: `nothing`
 - **CHANGE_METADATA**: `client-side retry`
 
-#### Resumable upload
+#### Resumable chunked upload
 
 **$server \to client$**
 - Ловим исключение в враппере, не увеличиваем счетчик retry

@@ -37,14 +37,15 @@ ___
 DTO теперь — это декларативное описание контракта.
 
 - **Входящие DTO:** Используем аннотации у параметров конструктора:
-    
     - `@QueryParam("name")`
         
     - `@RequestHeader("X-Token")`
         
-    - `@RequestBody` (для JSON) - по умолчанию.
+    - `@RequestBody` (для JSON) 
 		
-	- **`@RequestMapping`** - для маршрутизации 
+	- **`@RequestMapping`** (над классом) - для маршрутизации 
+		
+	- **`@UserId`** 
 		
     - Стандартные аннотации валидации из Hibernate: `@NotBlank`, `@Positive`, `@Pattern`.
         
@@ -66,28 +67,8 @@ DTO теперь — это декларативное описание конт
 
 ##### 4. Удаление лишних слоев
 
-- **Удаляем `FileController`:** Его задачи (парсинг параметров и вызов сервиса) теперь распределены между Декодером и Бизнес-хендлером.
+- **Удаляем `FileController`:** Его задачи (парсинг параметров и вызов сервиса) теперь распределены между Декодером и Бизнес-хендлером. Некоторые хендлеры теперь - контроллеры
     
 - **Удаляем ручную валидацию:** Больше никаких `Validators.all(...)` и `if (!result.isValid())`. Всё происходит автоматически в пайплайне.
     
 - **Удаляем передачу `JwtService` в DTO:** Токен проверяется один раз в начале пути.
-
-```java
-@Override
-protected void encode(ChannelHandlerContext ctx, Object msg, List<Object> out) {
-    // 1. Если это уже готовый низкоуровневый объект Netty - ничего не делаем, пускаем дальше
-    if (msg instanceof ChunkedInput || msg instanceof ByteBuf || msg instanceof HttpContent) {
-        out.add(ReferenceCountUtil.retain(msg));
-        return;
-    }
-
-    // 2. Если это твой DTO (помечаем их интерфейсом или просто проверяем пакет)
-    if (isYourDto(msg)) {
-        FullHttpResponse response = assembleResponse(msg);
-        out.add(response);
-    } else {
-        // 3. Если пришло что-то непонятное - просто кидаем дальше или логируем ошибку
-        out.add(ReferenceCountUtil.retain(msg));
-    }
-}
-```

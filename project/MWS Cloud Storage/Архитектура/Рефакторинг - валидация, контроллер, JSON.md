@@ -24,7 +24,7 @@ ___
 
 - **JwtAuthenticationHandler:** Проверяет токен там, где он необходим. Если валиден — кладет `userId` в `AttributeKey` канала. Если нет — обрывает запрос.
     
-- **RequestToDtoDecoder:** Определяет тип DTO по URL, вытаскивает данные из Header/Query/Body и создает объект. Кеширует классы DTO
+- **RequestToDtoDecoder:** Определяет тип DTO по URL, вытаскивает данные из Header/Query/Body и создает объект.
     
 - **GlobalValidationHandler:** Один на весь проект. Прогоняет созданный DTO через Hibernate Validator (аннотации).
     
@@ -43,7 +43,9 @@ DTO теперь — это декларативное описание конт
     - `@RequestHeader("X-Token")`
         
     - `@RequestBody` (для JSON) - по умолчанию.
-        
+		
+	- **`@RequestMapping`** - для маршрутизации 
+		
     - Стандартные аннотации валидации из Hibernate: `@NotBlank`, `@Positive`, `@Pattern`.
         
 - **Исходящие DTO:**

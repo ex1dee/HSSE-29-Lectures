@@ -54,6 +54,9 @@ DTO теперь — это декларативное описание конт
     - `@ResponseHeader("Content-Type")` для полей, которые должны уйти в заголовки.
 
 	- `@ResponseBody` (для JSON) - по умолчанию
+		
+	- **`@ResponseStatus`** (над классом) - http status
+	  
 
 #### 3. Reflection + Caching
 

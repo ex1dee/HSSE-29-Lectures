@@ -156,6 +156,7 @@
  
     {trigger: "<->", replacement: "\\leftrightarrow ", options: "mA"},
 	{trigger: "->", replacement: "\\to", options: "mA"},
+    {trigger: "<-", replacement: "\\leftarrow", options: "mA"},
 	{trigger: "!>", replacement: "\\mapsto", options: "mA"},
     {trigger: "==>", replacement: "\\Longrightarrow", options: "mA"},
     {trigger: "==<", replacement: "\\Longleftarrow", options: "mA"},
@@ -186,6 +187,7 @@
 	{trigger: "NN", replacement: "\\mathbb{N}", options: "mA"},
     {trigger: "QQ", replacement: "\\mathbb{Q}", options: "mA"},
     {trigger: "II", replacement: "\\mathbb{I}", options: "mA"},
+    {trigger: "TT", replacement: "\\mathbb{T}", options: "mA"},
     {trigger: "eRR", replacement: "\\overline{\\mathbb{R}}", options: "mA"},
     {trigger: "ERR", replacement: "\\widehat{\\mathbb{R}}", options: "mA"},
  
@@ -303,6 +305,7 @@
 	{trigger: "(", replacement: "($0)$1", options: "mA"},
 	{trigger: "{", replacement: "{$0}$1", options: "mA"},
 	{trigger: "[", replacement: "[$0]$1", options: "mA"},
+    {trigger: "lrv", replacement: "\\left. $0 \\right|_{$1}^{$2} $3", options: "mA"},
 	{trigger: "lr(", replacement: "\\left( $0 \\right) $1", options: "mA"},
 	{trigger: "lr{", replacement: "\\left\\{ $0 \\right\\} $1", options: "mA"},
 	{trigger: "lr[", replacement: "\\left[ $0 \\right] $1", options: "mA"},
